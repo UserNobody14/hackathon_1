@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>ParkCoach</title>
+  </head>
+  <body>
+    <div id="main" class="nil-response-provided">
+      <h1>ParkCoach</h1>
+      <div class="infoBox">
+        <h3>Info:</h3>
+        <p>
+          Given the parking sign text, location, and time from the user, this
+          application will determine if you are allowed to park or not using our
+          AI.
+        </p>
+      </div>
+      <div class="submissionBox">
+        <h3>Submission:</h3>
+        <input type="text" id="submitBox" />
+        <button
+          type="submit"
+          id="submitButton"
+          onclick="triggerApiCallAndResponse()"
+        >
+          Submit
+        </button>
+      </div>
+      <script src="./script.js"></script>
+      <div class="response-boxes">
+        <div class="response-box no-response boxes-hidden">
+          <div class="response-title">No</div>
+          <div class="response-content">
+            <div class="response-description">
+              Unfortunately it looks like you won't be able to park here
+            </div>
+            <div class="response-reason" display="false">
+              <span class="reason-title">Reason: </span>
+              <span class="reason-description"
+                >This parking space is closed on saturday, and today is a
+                saturday</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="response-box yes-response boxes-hidden">
+          <div class="response-title">Yes!</div>
+          <div class="response-content">
+            <div class="response-description">
+              Our AI has determined you can park here!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>info</p>
+      <p>contributors</p>
+      <p>about</p>
+    </div>
+  </body>
+</html>
